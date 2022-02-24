@@ -42,8 +42,12 @@ public class Main {
         System.out.println("FirstRoot " + equation.getX1());
         System.out.println("SecondRoot " + equation.getX2());
 
-        equation = new Equation(2,3,0);
-        equation.calcRoot();
+        equation = new Equation(0,3,0);
+        try {
+            equation.calcRoot();
+        } catch (IllegalArgumentException ex) {
+            System.out.println("catch: "+ex.getMessage());
+        }
         System.out.println("FirstRoot " + equation.getX1());
         System.out.println("SecondRoot " + equation.getX2());
     }

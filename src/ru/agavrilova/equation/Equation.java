@@ -25,6 +25,9 @@ public class Equation {
     }
 
     public void calcRoot() {
+        if (a == 0){
+            throw new IllegalArgumentException("Неверный аргумент а");
+        }
         double d = calcDisc();
         if (d < 0) {
             this.x1 = null;
